@@ -1,0 +1,30 @@
+/****************************************
+HEADER ELEMENT
+*****************************************/
+header{
+    .home,.title,.login{
+        height:inherit;
+    }
+    .home,.title{
+        float:left;
+    }
+    .login{
+        float:right;
+        padding-top:30px;
+        margin-right:20px;
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+                float:right;
+                padding-right:10px;
+            }
+        }
+    }
+    .title{
+        padding-top:15px;
+        padding-left:15px;
+        height:20px;
+    }    
+}

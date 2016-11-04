@@ -1,0 +1,66 @@
+/****************************************
+ASIDE ELEMENT
+*****************************************/
+$color-active:#099f8e;
+
+nav ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+
+    li{
+        position:relative;
+    }
+
+    li a {
+        display: block;
+        padding: 8px 16px;
+        transition: 0.2s;
+    }
+
+   /* li a.active {
+        background-color: $color-active;
+    }*/
+
+    li a:hover:not(.active) {
+        background-color: $color-active;
+    }
+
+    li.dropdown:hover > ul.dropdown-content{
+       /* display: block;
+        transform: translateX(0px);
+        opacity: 1;
+        left: 100%;*/
+            left:100%;
+            display:block;
+            opacity:1;
+            transform: translateX(0px);
+    }    
+
+
+    ul.dropdown-content{
+        position:absolute;
+        left:0%;
+        top:0;
+        width:100%;
+        display:none;
+        opacity:0;
+        transition: transform 0.2s;
+        transform: translateX(50px);
+       /* display: none;
+        position: absolute;
+        top: 0;
+        transition: transform 10s;
+        transform: translateX(50px);
+        li{
+            display: block;                                    
+            background-color: $lst-color ;            
+        }*/
+    }
+
+
+
+}

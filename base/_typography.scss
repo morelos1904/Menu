@@ -1,0 +1,30 @@
+nav ul{
+    a {
+        color: #4C4C4C;
+        font-family: Arial;
+        font-size: 9pt;
+        text-decoration: none;
+    }
+    li a.active {
+        color: #000;
+    }
+
+    li a:hover:not(.active) {
+        color: #fff;
+    }
+}
+header{
+    a{
+        font-family: Arial;
+        font-size: 9pt;
+        text-decoration: none; 
+        color: #000;
+    }
+    .login a{
+        color: #fff;
+    }
+    .title {
+        font-size: 30px;
+        font-weight:bold;
+    }
+}

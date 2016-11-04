@@ -1,0 +1,60 @@
+/* style.css */
+$top-height:50px;
+$body-height:530px;
+$footer-height:50px;
+$aside-width:200px;
+$ini-color-gra:#00ff90;
+$fin-color-gra:#113c8b;
+$lst-color:#DEEAE0;
+
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+@import "layout/_nav.scss";
+@import "layout/_header.scss";
+
+@mixin gradient($start-colour, $end-colour) {
+  background-color: $start-colour;
+  background-image: -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
+  background-image: -webkit-linear-gradient(left, $start-colour, $end-colour);
+  background-image:    -moz-linear-gradient(left, $start-colour, $end-colour);
+  background-image:     -ms-linear-gradient(left, $start-colour, $end-colour);
+  background-image:      -o-linear-gradient(left, $start-colour, $end-colour);
+}
+/****************************************
+BASIC ELEMENTS
+*****************************************/
+header {
+  @include gradient($ini-color-gra, $fin-color-gra);
+  position: fixed; 
+  top: 0px;
+  height: $top-height;
+  width:100%;
+  display: block;
+}
+
+main {
+  width:auto;
+  display: block;
+  height:$body-height; 
+  position:relative;
+  top:$top-height;
+  left:$aside-width;
+}
+
+nav {
+  background-color:$lst-color ;
+  height:$body-height - $footer-height;
+  width: $aside-width;
+  float:left;
+  position: fixed; 
+  top:$top-height;
+}
+
+footer {
+  @include gradient($ini-color-gra, $fin-color-gra);
+  clear: both;
+  width:auto;
+  height: $footer-height;
+}
+
+
