@@ -6,11 +6,10 @@ $aside-width:200px;
 $ini-color-gra:#00ff90;
 $fin-color-gra:#113c8b;
 $lst-color:#DEEAE0;
+$color-active-lst:#099f8e;
 
 @import "base/_reset.scss";
-@import "base/_typography.scss";
-@import "layout/_nav.scss";
-@import "layout/_header.scss";
+
 
 @mixin gradient($start-colour, $end-colour) {
   background-color: $start-colour;
@@ -25,7 +24,7 @@ BASIC ELEMENTS
 *****************************************/
 header {
   @include gradient($ini-color-gra, $fin-color-gra);
-  position: fixed; 
+
   top: 0px;
   height: $top-height;
   width:100%;
@@ -45,8 +44,7 @@ nav {
   background-color:$lst-color ;
   height:$body-height - $footer-height;
   width: $aside-width;
-  float:left;
-  position: fixed; 
+
   top:$top-height;
 }
 
@@ -57,4 +55,6 @@ footer {
   height: $footer-height;
 }
 
-
+@import "base/_typography.scss";
+@import "layout/_nav.scss";
+@import "layout/_header.scss";
